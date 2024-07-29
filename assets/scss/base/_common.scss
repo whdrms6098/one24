@@ -1,0 +1,93 @@
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  margin: -1px;
+}
+
+.sticky {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+
+  @include tablet {
+    position: static;
+    height: auto;
+    overflow: visible;
+  }
+}
+
+[class*="slide"] {
+  display: flex;
+
+  @include tablet {
+    flex-direction: column;
+  }
+}
+
+.arrow-link {
+  font-size: 12px;
+  line-height: 1.23077;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: $color-orange;
+
+  &.arrow--black {
+    color: $color-black;
+
+    .arrow {
+      background-color: $color-black;
+    }
+  }
+
+  .arrow {
+    width: 43px;
+    height: 43px;
+    background-color: $color-orange;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+
+    &__wrap {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform cubic-bezier(0.86, 0, 0.07, 1) .8s;
+    }
+
+    img {
+      width: 10px;
+    }
+
+    &--left {
+      transform: translateX(-100%);
+    }
+
+    &:hover {
+      .arrow--left {
+        transform: translateX(0);
+      }
+
+      .arrow--right {
+        transform: translateX(100%);
+      }
+    }
+  }
+}
+
+@keyframes textLoop {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}

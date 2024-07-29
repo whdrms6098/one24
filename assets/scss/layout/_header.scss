@@ -1,0 +1,129 @@
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 28px 38px 0;
+    z-index: 9;
+    color: $color-white;
+    transition: color .2s ease-in-out;
+
+    @include tablet {
+        position: absolute;
+    }
+
+    &.dark {
+        color: $color-black;
+
+        .header__gnb-list a {
+            &::before {
+                background-color: $color-black;
+            }
+        }
+    }
+
+    &__gnb {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        &-list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @include tablet {
+                display: none;
+            }
+
+
+            li {
+                padding: 0 32px;
+                font-size: 12px;
+                font-weight: 400;
+                position: relative;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &.active::before {
+                        transform: translateX(0);
+                        opacity: 1;
+                    }
+
+
+                    &::before {
+                        content: "";
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 50%;
+                        background-color: $color-white;
+                        position: absolute;
+                        left: 16px;
+                        transform: translateX(-100%);
+                        opacity: 0;
+                        transition: transform .2s, opacity .2s;
+                    }
+
+                    &:hover:not(.active) {
+                        &::before {
+                            transform: translateX(0%);
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__util-list {
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 28px 38px 0;
+        display: flex;
+        align-items: center;
+        gap: 34px;
+
+        li {
+            font-size: 12px;
+            font-weight: 400;
+            position: relative;
+
+            @include tablet {
+                font-size: clamp(12px, 3vw, 18px);
+            }
+
+            a {
+                display: flex;
+                align-items: center;
+
+                @include tablet {
+                    color: $color-white;
+                }
+
+                &::before {
+                    content: "";
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 50%;
+                    background-color: $color-white;
+                    position: absolute;
+                    left: 0;
+                    transform: translateX(-300%);
+                    opacity: 0;
+                    transition: transform .2s, opacity .2s;
+                }
+
+                &:hover {
+                    &::before {
+                        transform: translateX(-200%);
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONE24 | Residence</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link href="./assets/images/favicon.png" rel="shortcut icon" type="image/x-icon">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <script src="./assets/js/split.min.js" defer></script>
+    <script src="./assets/js/main.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="header__gnb">
+            <ul class="header__gnb-list">
+                <li>
+                    <a href="#" class="active" data-nav="home">HOME</a>
+                </li>
+                <li>
+                    <a href="#" data-nav="vision">VISION</a>
+                </li>
+                <li>
+                    <a href="#" data-nav="apart">APARTMENTS</a>
+                </li>
+                <li>
+                    <a href="#" data-nav="island">THE ISLAND</a>
+                </li>
+                <li>
+                    <a href="#" data-nav="location">LOCATION</a>
+                </li>
+                <li>
+                    <a href="#" data-nav="avail">AVAILABILITY</a>
+                </li>
+            </ul>
+        </nav>
+
+        <ul class="header__util-list">
+            <li>
+                <a href="#">PT</a>
+            </li>
+            <li>
+                <a href="#">INQUIRE</a>
+            </li>
+        </ul>
+    </header>
+
+    <main id="container">
+        <div class="sc-wrapper">
+            <div class="sticky">
+                <div class="scroll-slide">
+                    <div class="slide1">
+                        <section class="home" id="sc1">
+                            <div class="home__bg">
+                                <img src="./assets/images/intro-bg.webp" alt>
+                            </div>
+
+                            <div class="home__group">
+                                <div class="home__logo">
+                                    <img src="./assets/images/logo.svg" alt="ONE24">
+                                </div>
+
+                                <div class="home__header">
+                                    <div class="home__header-title">
+                                        <h1>COMFORT AND ELEGANCE AT MADEIRA ISLAND</h1>
+                                    </div>
+                                    <div class="home__header-desc">
+                                        <p>CAREFULLY THOUGHT OUT AND TAILORED WITH GREAT FLEXIBILITY, ADAPTING ITSELF TO
+                                            THE
+                                            NEEDS AND LIFESTYLE OF THE CLIENTS</p>
+                                    </div>
+                                </div>
+
+                                <div class="home__bottom">
+                                    <div class="home__bottom-call">
+                                        <div class="home__bottom-call-title">
+                                            <p>CALL US TODAY</p>
+                                        </div>
+
+                                        <div class="home__bottom-call-desc-wrap">
+                                            <div class="home__bottom-call-desc">
+                                                <span>
+                                                    <a href="#">+351 291 147 686</a>
+                                                </span>
+                                                <p>LOCAL CALL, FEES MAY APPLY</p>
+                                                <span>
+                                                    <a href="#">+351 967 182 444</a>
+                                                </span>
+                                                <p>LOCAL CALL, FEES MAY APPLY</p>
+                                            </div>
+
+                                            <img src="./assets/images/energia.svg" alt class="home__bottom-img">
+                                        </div>
+                                    </div>
+
+                                    <div class="home__bottom-scroll">
+                                        <span>SCROLL</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="vision" id="sc2">
+                            <div class="vision__title">
+                                <h2>ELEVATE YOUR LIFESTYLE</h2>
+                                <p>OUR VISION FOR LUXURY LIVING <span>ON ONE24</span> IS TO CREATE A ONE-OF-A-KIND
+                                    DEVELOPMENT THAT
+                                    COMBINES CONTEMPORARY DESIGN WITH THE NATURAL BEAUTY OF THE <span>ISLAND</span>.</p>
+                            </div>
+
+                            <div class="vision__img">
+                                <figure class="vision__img-box">
+                                    <div class="vision__img-box-item">
+                                        <div class="vision__img-box-item--brown"></div>
+                                        <img src="./assets/images/vision.webp" alt="Ilha da Madeira">
+                                    </div>
+
+                                    <figcaption class="vision__img-box__caption">FEATURING STRAIGHT LINES AND MODERN
+                                        AMENITIES, OUR DEVELOPMENT WILL OFFER
+                                        RESIDENTS THE ULTIMATE IN STYLE AND COMFORT. OUR VISION IS TO SET A NEW STANDARD
+                                        FOR
+                                        LUXURY LIVING ON MADEIRA ISLAND.</figcaption>
+                                </figure>
+                            </div>
+                        </section>
+
+                        <section class="apart" id="sc3">
+                            <div class="apart__info">
+                                <div class="apart__info-desc">
+                                    <dl class="apart__info-desc-list">
+                                        <dt>LOCATION</dt>
+                                        <dd>FUNCHAL</dd>
+                                    </dl>
+                                    <dl class="apart__info-desc-list">
+                                        <dt>TYPOLOGIES</dt>
+                                        <dd>T1; T2; T3 DUPLEX</dd>
+                                    </dl>
+                                    <dl class="apart__info-desc-list">
+                                        <dt>RELEASE DATE</dt>
+                                        <dd>2023</dd>
+                                    </dl>
+                                    <dl class="apart__info-desc-list">
+                                        <dt>NR. OF APARTMENTS</dt>
+                                        <dd>13</dd>
+                                    </dl>
+                                </div>
+
+                                <div class="apart__info-title">
+                                    <h2>APARTMENTS</h2>
+                                    <strong>AN OASIS <br> OF NATURE</strong>
+
+                                    <a href="#" class="arrow-link">AVAILABLE APARTMENTS
+                                        <div class="arrow">
+                                            <span class="arrow__wrap arrow--left">
+                                                <img src="./assets/images/arrow-right.svg" alt>
+                                            </span>
+
+                                            <span class="arrow__wrap arrow--right">
+                                                <img src="./assets/images/arrow-right.svg" alt>
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="apart__gallery">
+                                <div class="apart__gallery-item">
+                                    <img src="./assets/images/apart-gallery1.webp" alt="Quarto ONE 24">
+                                    <span class="apart__gallery-item-title">BALCONY</span>
+                                </div>
+
+                                <div class="apart__gallery-item--split">
+                                    <div class="apart__gallery-item">
+                                        <img src="./assets/images/apart-gallery2.webp" alt="Quarto ONE 24">
+                                        <span class="apart__gallery-item-title">LIVING ROOM</span>
+                                    </div>
+
+                                    <div class="apart__gallery-item">
+                                        <img src="./assets/images/apart-gallery3.webp" alt="Quarto ONE 24">
+                                        <span class="apart__gallery-item-title">KITCHEN</span>
+                                    </div>
+                                </div>
+
+                                <div class="apart__gallery-item">
+                                    <img src="./assets/images/apart-gallery4.webp" alt="Quarto ONE 24">
+                                    <span class="apart__gallery-item-title">BEDROOM</span>
+                                </div>
+
+                                <!-- <div class="apart__gallery-expand">
+                                <span class="apart__gallery-expand--blur"></span>
+                                <p>expand</p>
+                            </div> -->
+                            </div>
+                        </section>
+
+                        <section class="island" id="sc4">
+                            <div class="island__title">
+                                <h2>THE ISLAND</h2>
+                                <strong>EXPERIENCE THE BEST OF ISLAND</strong>
+                            </div>
+                            <div class="island__video">
+                                <div class="island__video-box">
+                                    <video src="./assets/video/island.mp4" muted loop autoplay></video>
+                                </div>
+                            </div>
+                            <div class="island__info">
+                                <strong>LIVING ON MADEIRA</strong>
+                                <p>LIVING ON ONE24 OFFERS A CHANCE TO EXPERIENCE THE ISLAND'S LUSH GREEN LANDSCAPES,
+                                    PICTURESQUE BEACHES, AND WARM CLIMATE ALL YEAR ROUND. THE ISLAND IS HOME TO A
+                                    DIVERSE ARRAY OF OUTDOOR ACTIVITIES, FROM HIKING TO PARAGLIDING, AND THE LOCAL
+                                    CULTURE IS RICH WITH HISTORY AND TRADITION. IN ADDITION, MADEIRA HAS A GROWING
+                                    ECONOMY, MAKING IT AN EXCELLENT PLACE TO LIVE AND WORK. WHETHER YOU'RE LOOKING FOR A
+                                    PEACEFUL RETREAT OR AN EXCITING ADVENTURE, MADEIRA ISLAND HAS SOMETHING FOR
+                                    EVERYONE.</p>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="slide2">
+                        <section class="location" id="sc5">
+                            <div class="sticky--m">
+                                <div class="location__loop">
+                                    <div class="location__loop-track">
+                                        <p>IN HEART OF FUNCHAL</p>
+                                        <p>IN HEART OF FUNCHAL</p>
+                                        <p>IN HEART OF FUNCHAL</p>
+                                        <p>IN HEART OF FUNCHAL</p>
+                                        <p>IN HEART OF FUNCHAL</p>
+                                        <p>IN HEART OF FUNCHAL</p>
+                                        <p>IN HEART OF FUNCHAL</p>
+                                    </div>
+                                </div>
+
+                                <div class="location__progress">
+                                    <div class="location__progress-bar"></div>
+                                </div>
+
+                                <div class="location-info">
+                                    <div class="location-info__item">
+                                        <h2>LOCATION</h2>
+
+                                        <div class="location-info__desc">
+                                            <div class="location-info__desc-box location-info__desc--area1">
+                                                <strong>ESCAPE TO NATURE'S <span>PARADISE</span></strong>
+                                                <p>OUR LUXURIOUS LIVING ON MADEIRA ISLAND IS NESTLED IN THE HEART OF
+                                                    NATURE'S PARADISE. THE ISLAND IS KNOWN FOR ITS STUNNING
+                                                    LANDSCAPES
+                                                    AND
+                                                    UNIQUE FLORA AND FAUNA, AND OUR DEVELOPMENT PUTS YOU RIGHT IN
+                                                    THE
+                                                    MIDDLE
+                                                    OF IT ALL.</p>
+                                            </div>
+                                            <div class="location-info__desc-box location-info__desc--area2">
+                                                <strong>ON YOUR DOORSTEP</strong>
+                                                <p>OUR DEVELOPMENT IS IN CLOSE PROXIMITY TO TOP-RATED SCHOOLS,
+                                                    WORLD-CLASS
+                                                    HEALTHCARE FACILITIES, AND RECREATIONAL ACTIVITIES SUCH AS
+                                                    GOLFING,
+                                                    SAILING AND MORE.
+
+                                                </p>
+                                            </div>
+                                            <div class="location-info__desc-box location-info__desc--area3">
+                                                <strong>ACCESSIBILITY</strong>
+                                                <p>NOT ONLY ARE YOU SITUATED IN THE HEART OF THE ISLAND, WITH EASY
+                                                    ACCESS TO
+                                                    ALL OF ITS AMENITIES, BUT YOU ARE ALSO WELL-CONNECTED TO THE
+                                                    REST OF
+                                                    THE
+                                                    WORLD. THE ISLAND'S AIRPORT OFFERS REGULAR FLIGHTS TO MAJOR
+                                                    EUROPEAN
+                                                    CITIES, ALLOWING YOU TO EASILY TRAVEL FOR BUSINESS OR PLEASURE.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <a href="#" class="arrow-link">SEE LOCATION
+                                        <div class="arrow">
+                                            <span class="arrow__wrap arrow--left">
+                                                <img src="./assets/images/arrow-right.svg" alt>
+                                            </span>
+
+                                            <span class="arrow__wrap arrow--right">
+                                                <img src="./assets/images/arrow-right.svg" alt>
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="location__img">
+                                    <img src="./assets/images/location-bg.webp" alt="EDIFICIO ONE 24">
+                                </div>
+                            </div>
+                        </section>
+                        <section class="avail" id="sc6">
+                            <div class="inner">
+                                <div class="avail__title">
+                                    <h2>AVAILABILITY</h2>
+                                    <strong>DISCOVER OUR <br> AVAILABLE APARTMENTS</strong>
+                                </div>
+
+                                <div class="avail__links">
+                                    <a href="#" class="arrow-link">AVAILABLE APARTMENTS
+                                        <div class="arrow">
+                                            <span class="arrow__wrap arrow--left">
+                                                <img src="./assets/images/arrow-right.svg" alt>
+                                            </span>
+
+                                            <span class="arrow__wrap arrow--right">
+                                                <img src="./assets/images/arrow-right.svg" alt>
+                                            </span>
+                                        </div>
+                                    </a>
+
+                                    <a href="#" class="arrow-link arrow--black">AVAILABLE APARTMENTS
+                                        <div class="arrow">
+                                            <span class="arrow__wrap arrow--left">
+                                                <img src="./assets/images/arrow-right.svg" alt>
+                                            </span>
+
+                                            <span class="arrow__wrap arrow--right">
+                                                <img src="./assets/images/arrow-right.svg" alt>
+                                            </span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <table class="avail__table">
+                                    <thead class="avail__table-head">
+                                        <tr class="avail__table-row">
+                                            <th class="avail__table--fraction">Fraction</th>
+                                            <th class="avail__table--bedrooms">Bedrooms</th>
+                                            <th class="avail__table--floor">Floor</th>
+                                            <th class="avail__table--side">Side</th>
+                                            <th class="avail__table--parking">Parking</th>
+                                            <th class="avail__table--areas">Areas (m2)</th>
+                                            <th class="avail__table--availability">Availability</th>
+                                            <th class="avail__table--floorplan">Floorplan</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="avail__table-body">
+                                        <tr class="avail__table-row">
+                                            <td
+                                                class="avail__table-cell avail__table--fraction avail__table-cell--large">
+                                                K
+                                            </td>
+                                            <td class="avail__table-cell avail__table--bedrooms">2 <span
+                                                    class="text--pc">Bedrooms</span></td>
+                                            <td class="avail__table-cell avail__table--floor">0</td>
+                                            <td class="avail__table-cell avail__table--side">Right</td>
+                                            <td class="avail__table-cell avail__table--parking">Yes</td>
+                                            <td class="avail__table-cell avail__table--areas">147.01</td>
+                                            <td class="avail__table-cell avail__table--availability">Available</td>
+                                            <td class="avail__table-cell avail__table--floorplan">
+                                                <a href="#" class="avail__btn">View <span
+                                                        class="btn--pc">Floorplan</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr class="avail__table-row">
+                                            <td
+                                                class="avail__table-cell avail__table--fraction avail__table-cell--large">
+                                                L
+                                            </td>
+                                            <td class="avail__table-cell avail__table--bedrooms">1 <span
+                                                    class="text--pc">BEDROOMS</span></td>
+                                            <td class="avail__table-cell avail__table--floor">0</td>
+                                            <td class="avail__table-cell avail__table--side">FRONT</td>
+                                            <td class="avail__table-cell avail__table--parking">YES</td>
+                                            <td class="avail__table-cell avail__table--areas">122.08</td>
+                                            <td class="avail__table-cell avail__table--availability">AVAILABLE</td>
+                                            <td class="avail__table-cell avail__table--floorplan">
+                                                <a href="#" class="avail__btn">View <span
+                                                        class="btn--pc">Floorplan</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr class="avail__table-row">
+                                            <td
+                                                class="avail__table-cell avail__table--fraction avail__table-cell--large">
+                                                M
+                                            </td>
+                                            <td class="avail__table-cell avail__table--bedrooms"> 2 <span
+                                                    class="text--pc">BEDROOMS</span></td>
+                                            <td class="avail__table-cell avail__table--floor">0</td>
+                                            <td class="avail__table-cell avail__table--side">LEFT</td>
+                                            <td class="avail__table-cell avail__table--parking">YES</td>
+                                            <td class="avail__table-cell avail__table--areas">166.56</td>
+                                            <td class="avail__table-cell avail__table--availability"> AVAILABLE</td>
+                                            <td class="avail__table-cell avail__table--floorplan">
+                                                <a href="#" class="avail__btn">View <span
+                                                        class="btn--pc">Floorplan</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr class="avail__table-row">
+                                            <td
+                                                class="avail__table-cell avail__table--fraction avail__table-cell--large">
+                                                I
+                                            </td>
+                                            <td class="avail__table-cell avail__table--bedrooms"> 2 <span
+                                                    class="text--pc">BEDROOMS</span></td>
+                                            <td class="avail__table-cell avail__table--floor">1</td>
+                                            <td class="avail__table-cell avail__table--side">RIGHT</td>
+                                            <td class="avail__table-cell avail__table--parking">YES</td>
+                                            <td class="avail__table-cell avail__table--areas">135.11</td>
+                                            <td class="avail__table-cell avail__table--availability"> AVAILABLE</td>
+                                            <td class="avail__table-cell avail__table--floorplan">
+                                                <a href="#" class="avail__btn">View <span
+                                                        class="btn--pc">Floorplan</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr class="avail__table-row">
+                                            <td
+                                                class="avail__table-cell avail__table--fraction avail__table-cell--large">
+                                                J
+                                            </td>
+                                            <td class="avail__table-cell avail__table--bedrooms"> 2 <span
+                                                    class="text--pc">BEDROOMS</span></td>
+                                            <td class="avail__table-cell avail__table--floor">1</td>
+                                            <td class="avail__table-cell avail__table--side">LEFT</td>
+                                            <td class="avail__table-cell avail__table--parking">YES</td>
+                                            <td class="avail__table-cell avail__table--areas">134.5</td>
+                                            <td class="avail__table-cell avail__table--availability"> AVAILABLE</td>
+                                            <td class="avail__table-cell avail__table--floorplan">
+                                                <a href="#" class="avail__btn">View <span
+                                                        class="btn--pc">Floorplan</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr class="avail__table-row">
+                                            <td
+                                                class="avail__table-cell avail__table--fraction avail__table-cell--large">
+                                                F
+                                            </td>
+                                            <td class="avail__table-cell avail__table--bedrooms"> 2 <span
+                                                    class="text--pc">BEDROOMS</span></td>
+                                            <td class="avail__table-cell avail__table--floor">2</td>
+                                            <td class="avail__table-cell avail__table--side">RIGHT</td>
+                                            <td class="avail__table-cell avail__table--parking">YES</td>
+                                            <td class="avail__table-cell avail__table--areas">135.11</td>
+                                            <td class="avail__table-cell avail__table--availability"> AVAILABLE</td>
+                                            <td class="avail__table-cell avail__table--floorplan">
+                                                <a href="#" class="avail__btn">View <span
+                                                        class="btn--pc">Floorplan</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr class="avail__table-row">
+                                            <td
+                                                class="avail__table-cell avail__table--fraction avail__table-cell--large">
+                                                G
+                                            </td>
+                                            <td class="avail__table-cell avail__table--bedrooms"> 3 <span
+                                                    class="text--pc">BEDROOMS</span></td>
+                                            <td class="avail__table-cell avail__table--floor">2</td>
+                                            <td class="avail__table-cell avail__table--side">FRONT</td>
+                                            <td class="avail__table-cell avail__table--parking">YES</td>
+                                            <td class="avail__table-cell avail__table--areas">220.78</td>
+                                            <td class="avail__table-cell avail__table--availability"> AVAILABLE</td>
+                                            <td class="avail__table-cell avail__table--floorplan">
+                                                <a href="#" class="avail__btn">View <span
+                                                        class="btn--pc">Floorplan</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr class="avail__table-row">
+                                            <td
+                                                class="avail__table-cell avail__table--fraction avail__table-cell--large">
+                                                H
+                                            </td>
+                                            <td class="avail__table-cell avail__table--bedrooms"> 2 <span
+                                                    class="text--pc">BEDROOMS</span></td>
+                                            <td class="avail__table-cell avail__table--floor">2</td>
+                                            <td class="avail__table-cell avail__table--side">LEFT</td>
+                                            <td class="avail__table-cell avail__table--parking">YES</td>
+                                            <td class="avail__table-cell avail__table--areas">135.11</td>
+                                            <td class="avail__table-cell avail__table--availability"> AVAILABLE</td>
+                                            <td class="avail__table-cell avail__table--floorplan">
+                                                <a href="#" class="avail__btn">View <span
+                                                        class="btn--pc">Floorplan</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr class="avail__table-row">
+                                            <td
+                                                class="avail__table-cell avail__table--fraction avail__table-cell--large">
+                                                D
+                                            </td>
+                                            <td class="avail__table-cell avail__table--bedrooms"> 2 <span
+                                                    class="text--pc">BEDROOMS</span></td>
+                                            <td class="avail__table-cell avail__table--floor">3</td>
+                                            <td class="avail__table-cell avail__table--side">RIGHT</td>
+                                            <td class="avail__table-cell avail__table--parking">YES</td>
+                                            <td class="avail__table-cell avail__table--areas">134.5</td>
+                                            <td class="avail__table-cell avail__table--availability"> AVAILABLE</td>
+                                            <td class="avail__table-cell avail__table--floorplan">
+                                                <a href="#" class="avail__btn">View <span
+                                                        class="btn--pc">Floorplan</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr class="avail__table-row">
+                                            <td
+                                                class="avail__table-cell avail__table--fraction avail__table-cell--large">
+                                                E
+                                            </td>
+                                            <td class="avail__table-cell avail__table--bedrooms"> 2 <span
+                                                    class="text--pc">BEDROOMS</span></td>
+                                            <td class="avail__table-cell avail__table--floor">3</td>
+                                            <td class="avail__table-cell avail__table--side">LEFT</td>
+                                            <td class="avail__table-cell avail__table--parking">YES</td>
+                                            <td class="avail__table-cell avail__table--areas">135.11</td>
+                                            <td class="avail__table-cell avail__table--availability"> AVAILABLE</td>
+                                            <td class="avail__table-cell avail__table--floorplan">
+                                                <a href="#" class="avail__btn">View <span
+                                                        class="btn--pc">Floorplan</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr class="avail__table-row">
+                                            <td
+                                                class="avail__table-cell avail__table--fraction avail__table-cell--large">
+                                                A
+                                            </td>
+                                            <td class="avail__table-cell avail__table--bedrooms"> 2 <span
+                                                    class="text--pc">BEDROOMS</span></td>
+                                            <td class="avail__table-cell avail__table--floor">4</td>
+                                            <td class="avail__table-cell avail__table--side">RIGHT</td>
+                                            <td class="avail__table-cell avail__table--parking">YES</td>
+                                            <td class="avail__table-cell avail__table--areas">135.11</td>
+                                            <td class="avail__table-cell avail__table--availability"> AVAILABLE</td>
+                                            <td class="avail__table-cell avail__table--floorplan">
+                                                <a href="#" class="avail__btn">View <span
+                                                        class="btn--pc">Floorplan</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr class="avail__table-row">
+                                            <td
+                                                class="avail__table-cell avail__table--fraction avail__table-cell--large">
+                                                B
+                                            </td>
+                                            <td class="avail__table-cell avail__table--bedrooms"> 3 <span
+                                                    class="text--pc">BEDROOMS</span></td>
+                                            <td class="avail__table-cell avail__table--floor">4</td>
+                                            <td class="avail__table-cell avail__table--side">FRONT</td>
+                                            <td class="avail__table-cell avail__table--parking">YES</td>
+                                            <td class="avail__table-cell avail__table--areas">220.78</td>
+                                            <td class="avail__table-cell avail__table--availability"> AVAILABLE</td>
+                                            <td class="avail__table-cell avail__table--floorplan">
+                                                <a href="#" class="avail__btn">View <span
+                                                        class="btn--pc">Floorplan</span></a>
+                                            </td>
+                                        </tr>
+                                        <tr class="avail__table-row">
+                                            <td
+                                                class="avail__table-cell avail__table--fraction avail__table-cell--large">
+                                                C
+                                            </td>
+                                            <td class="avail__table-cell avail__table--bedrooms"> 2 <span
+                                                    class="text--pc">BEDROOMS</span></td>
+                                            <td class="avail__table-cell avail__table--floor">4</td>
+                                            <td class="avail__table-cell avail__table--side">LEFT</td>
+                                            <td class="avail__table-cell avail__table--parking">YES</td>
+                                            <td class="avail__table-cell avail__table--areas">135.11</td>
+                                            <td class="avail__table-cell avail__table--availability"> AVAILABLE</td>
+                                            <td class="avail__table-cell avail__table--floorplan">
+                                                <a href="#" class="avail__btn">View <span
+                                                        class="btn--pc">Floorplan</span></a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <footer class="footer" data-move="y-move">
+                                <h2 class="blind">ONE24 푸터</h2>
+
+                                <div class="footer__bg">
+                                    <!-- <img src="./assets/images/footer-bg.webp" alt> -->
+                                </div>
+
+                                <div class="footer__group">
+                                    <div class="footer__header">
+                                        <div class="footer__header-title">
+                                            <strong>INQUIRE TODAY</strong>
+                                        </div>
+                                        <div class="footer__header-schedule">
+                                            <button class="footer__header-schedule-btn">SCHEDUL</button>
+                                        </div>
+                                        <div class="footer__header-desc">
+                                            <p>NEED A QUICK RESPONSE? OUR SALES CONSULTANTS ARE READY TO HELP, WHEN YOU
+                                                NEED
+                                                IT.</p>
+                                        </div>
+                                    </div>
+
+                                    <nav class="footer__nav">
+                                        <div class="col-left">
+                                            <address class="footer__address">
+                                                <p>VISIT US</p>
+                                                <a href="#">AV. ARRIAGA 75 LOJA A, MARINA SHOPPING 9000-065 FUNCHAL</a>
+                                            </address>
+                                            <div class="footer__contact">
+                                                <p>CONTACT US</p>
+                                                <a href="#">+351 291 147 686</a>
+                                                <span>LOCAL CALL, FEES MAY APPLY</span>
+                                                <a href="#">+351 967 182 444</a>
+                                                <span>LOCAL CALL, FEES MAY APPLY</span>
+                                            </div>
+                                            <div class="footer__info">
+                                                <a href="#">PRIVACY POLICY</a>
+                                                <a href="#">COMPLAINT BOOK</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-right">
+                                            <div class="footer__bemine">
+                                                <p>AN EXCLUSIVE</p>
+                                                <a href="#">
+                                                    <img src="./assets/images/bemine.webp" alt="bemine">
+                                                </a>
+                                            </div>
+                                            <div class="footer__small">
+                                                <a href="#">DESIGNED BY DUALL©</a>
+                                                <small>©ONE24 - 2023. ALL RIGHTS RESERVED.</small>
+                                            </div>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </footer>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
