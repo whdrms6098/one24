@@ -558,21 +558,32 @@
 }
 
 .island {
-    width: 100vw;
+    width: 150vw;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     background-color: $color-orange;
-    padding: 107px 18px 100px;
     color: $color-white;
     position: relative;
-    perspective: 510px;
 
     @include tablet {
-        height: auto;
-        padding: 85px 30px;
-        gap: 45vw;
+        width: 100%;
+    }
+
+    .sticky {
+        width: 100vw;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        padding: 107px 18px 100px;
+        perspective: 510px;
+
+        @include tablet {
+            width: 100%;
+            padding: 85px 30px;
+            gap: 45vw;
+        }
     }
 
     &__title {
@@ -688,6 +699,7 @@
 }
 
 .location {
+    width: 300vw;
     height: 100%;
     background-color: $color-beige;
     display: flex;
@@ -695,12 +707,14 @@
     position: relative;
 
     @include tablet {
+        width: 100%;
         min-height: 450vh;
         display: block;
 
     }
 
-    .sticky--m {
+    .sticky {
+        width: 100vw;
         height: 100%;
         display: flex;
 
@@ -734,6 +748,10 @@
             position: absolute;
             bottom: 0;
 
+            @include pc1300 {
+                transform: translateX(62.25px) rotate(-90deg);
+            }
+
             @include tablet {
                 position: static;
                 transform: none;
@@ -749,6 +767,10 @@
             animation: textLoop 2s linear infinite;
             display: flex;
             align-items: center;
+
+            @include pc1300 {
+                font-size: 30px;
+            }
 
             @include tablet {
                 font-size: clamp(36px, 8vw, 70px);
@@ -822,6 +844,7 @@
             @include tablet {
                 max-width: 500px;
                 height: 60vw;
+                min-height: 280px;
             }
 
             h2 {
@@ -909,7 +932,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transform: scale(1.1) translateX(-20%);
+            transform: scale(1.3);
 
             @include tablet {
                 transform: none;
@@ -919,16 +942,29 @@
 }
 
 .avail {
-    width: 100vw;
+    width: 200vw;
     height: max-content;
     display: flex;
     flex-direction: column;
+
+    @include tablet{
+        width: 100%;
+    }
 
     .inner {
         padding: 107px 36px 100px;
         display: flex;
         flex-direction: column;
         background-color: $color-beige;
+    }
+
+    .sticky {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        position: static;
+        height: auto;
+        overflow: auto;
     }
 
     &__title {
@@ -997,6 +1033,10 @@
         background-color: $color-beige;
         margin-top: 100px;
 
+        @include mobile {
+            margin-top: 50px;
+        }
+
         &-row {
             border-bottom: 1px solid $gray-line;
             display: flex;
@@ -1014,7 +1054,7 @@
                 padding-bottom: 12px;
 
                 @include tablet {
-                    font-size: clamp(12px, 3vw, 24px);
+                    font-size: clamp(10px, 3vw, 24px);
                 }
             }
         }
@@ -1036,6 +1076,10 @@
                 .text--pc {
                     display: none;
                 }
+            }
+
+            @include mobile {
+                height: 54px;
             }
 
             &--large {
@@ -1132,6 +1176,10 @@
             .btn--pc {
                 display: none;
             }
+        }
+
+        @include mobile {
+            height: 28px;
         }
     }
 }

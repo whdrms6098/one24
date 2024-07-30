@@ -20,6 +20,12 @@
                 background-color: $color-black;
             }
         }
+
+        .header__util-list a {
+            &::before {
+                background-color: $color-black;
+            }
+        }
     }
 
     &__gnb {

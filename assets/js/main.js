@@ -1,3 +1,5 @@
+history.scrollRestoration = "manual";
+
 const lenis = new Lenis();
 
 lenis.on("scroll", ScrollTrigger.update);
@@ -60,6 +62,7 @@ const mm = gsap.matchMedia();
 
 mm.add("(min-width: 1001px)", () => {
     gsap.set(`[data-move="y-move"]`, { yPercent: -100 });
+
     const slide = gsap.timeline({
         scrollTrigger: {
             trigger: ".sc-wrapper",
@@ -72,8 +75,9 @@ mm.add("(min-width: 1001px)", () => {
     });
 
     slide.to(".scroll-slide", {
+        xPercent: -100,
         x: function () {
-            return -$(".slide1").outerWidth() + window.innerWidth;
+            return window.innerWidth;
         },
         duration: 1,
     })
@@ -83,7 +87,7 @@ mm.add("(min-width: 1001px)", () => {
             trigger: ".home",
             containerAnimation: slide,
             start: "right 100%",
-            end: "right 0%",
+            end: "right 50%",
             scrub: 0,
             // markers: true,
         },
@@ -92,8 +96,8 @@ mm.add("(min-width: 1001px)", () => {
     const navVision = ScrollTrigger.create({
         trigger: ".vision",
         containerAnimation: slide,
-        start: "right 100%",
-        end: "right 100%",
+        start: "left 50%",
+        end: "left 50%",
         // markers: true,
         onEnter: function () {
             $(".header").addClass("dark");
@@ -111,8 +115,8 @@ mm.add("(min-width: 1001px)", () => {
         scrollTrigger: {
             trigger: ".vision",
             containerAnimation: slide,
-            start: "left 95%",
-            end: "left 95%",
+            start: "left 85%",
+            end: "left 85%",
             // scrub: 0,
             toggleActions: "play none reverse none",
             // markers: true,
@@ -141,8 +145,8 @@ mm.add("(min-width: 1001px)", () => {
     const navApart = ScrollTrigger.create({
         trigger: ".apart",
         containerAnimation: slide,
-        start: "left 60%",
-        end: "left 60%",
+        start: "left 30%",
+        end: "left 30%",
         // markers: true,
         onEnter: function () {
             $(".header__gnb-list a").removeClass("active");
@@ -154,15 +158,14 @@ mm.add("(min-width: 1001px)", () => {
         }
     })
 
-    const island = gsap.timeline({
+    const navIsland = gsap.timeline({
         scrollTrigger: {
             trigger: ".island",
             containerAnimation: slide,
-            start: "-50% 65%",
-            end: "-50% 65%",
+            start: "left 50%",
+            end: "left 50%",
             // scrub: 0,
             toggleActions: "play none reverse none",
-            pin:true,
             // markers: true,
             onEnter: function () {
                 $(".header").removeClass("dark");
@@ -177,8 +180,7 @@ mm.add("(min-width: 1001px)", () => {
         },
     });
 
-
-    island.from(".island .char", {
+    navIsland.from(".island .char", {
         opacity: 0,
         stagger: {
             each: 0.1,
@@ -187,40 +189,45 @@ mm.add("(min-width: 1001px)", () => {
         },
     })
 
-    island.to(".island__title", {
+    const islnad = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".island",
+            containerAnimation: slide,
+            start: "0 0%",
+            end: "100% 100%",
+            scrub: 0,
+            // markers: true,
+        }
+    });
+
+    islnad.to(".island .sticky", { xPercent: 50 }, "island");
+
+    islnad.to(".island__title", {
         yPercent: -50,
         rotateX: 60,
         opacity: 0,
         duration: .25,
-    }, "island")
+    }, "island");
 
-    island.to(".island__info", {
+    islnad.to(".island__info", {
         yPercent: 50,
         rotateX: -60,
         opacity: 0,
         duration: .25,
-    }, "island")
+    }, "island");
 
-    island.to(".island__video-box", {
+    islnad.to(".island__video-box", {
         width: "100%",
         height: "100%",
         marginTop: 0,
         duration: .25,
-    }, "island")
-
-
-    slide.to(".scroll-slide", {
-        xPercent: -100,
-        x: function () {
-            return $(".slide2").outerWidth();
-        },
-    })
+    }, "island");
 
     const navLocation = ScrollTrigger.create({
         trigger: ".location",
         containerAnimation: slide,
-        start: "left 100%",
-        end: "left 100%",
+        start: "left 50%",
+        end: "left 50%",
         // markers: true,
         onEnter: function () {
             $(".header").addClass("dark");
@@ -234,90 +241,88 @@ mm.add("(min-width: 1001px)", () => {
         }
     })
 
-    slide.to(".location-info__desc--area1", {
-        opacity: 0,
-        duration: .1,
-        ease: "none",
-        onStart: function () {
-            updateProgressBar(25);
-        },
-        onReverseComplete: function () {
-            updateProgressBar(0);
-        }
-    });
-
-
-    slide.to(".location-info__desc--area2", {
-        opacity: 1,
-        duration: .1,
-        ease: "none",
-        onStart: function () {
-            updateProgressBar(50);
-        },
-        onReverseComplete: function () {
-            updateProgressBar(25);
-        }
-    });
-
-    slide.to(".location-info__desc--area2", {
-        opacity: 0,
-        duration: .1,
-        ease: "none",
-        onStart: function () {
-            updateProgressBar(75);
-        },
-        onReverseComplete: function () {
-            updateProgressBar(50);
-        }
-    });
-
-    slide.to(".location-info__desc--area3", {
-        opacity: 1,
-        duration: .1,
-        ease: "none",
-        onStart: function () {
-            updateProgressBar(100);
-        },
-        onReverseComplete: function () {
-            updateProgressBar(75);
-        }
-    });
-
-    function updateProgressBar(height) {
-        gsap.to(".location__progress-bar", { height: height + "%" });
-    }
-
-    slide.to(".scroll-slide", {
-        xPercent: -100,
-        x: function () {
-            return window.innerWidth;
-        },
-    })
-
-    const locationBg = gsap.timeline({
+    const locationSlide = gsap.timeline({
         scrollTrigger: {
             trigger: ".location",
             containerAnimation: slide,
-            start: "left -20%",
+            start: "0 0%",
+            end: "100% 100%",
+            scrub: 0,
+            // markers: true,
+        }
+    }).to(".location .sticky", {
+        xPercent: 200,
+    });
+
+    const location = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".location",
+            containerAnimation: slide,
+            start: "0 0%",
+            end: "100% 100%",
+            scrub: 0,
+            // markers: true,
+            onUpdate: function (self) {
+                gsap.to(".location__progress-bar", { height: (Math.floor(self.progress * 100)) + "%" });
+            },
+        }
+    });
+
+    location.to(".location-info__desc--area1", {
+        opacity: 0,
+    });
+
+    location.to(".location-info__desc--area2", {
+        opacity: 1,
+    });
+
+    location.to(".location-info__desc--area2", {
+        opacity: 0,
+    });
+
+    location.to(".location-info__desc--area3", {
+        opacity: 1,
+    });
+
+    const locationBg = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".avail",
+            containerAnimation: slide,
+            start: "-38% 0%",
             end: "right 100%",
             scrub: 0,
             // markers: true,
         },
     }).to(".location__img img", { xPercent: 20 });
 
-    slide.to(".avail", {
+    const avail = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".avail",
+            containerAnimation: slide,
+            start: "0% 0%",
+            end: "100% 100%",
+            scrub: 0,
+            // markers: true,
+        },
+    })
+
+    avail.to(".avail", { xPercent: 50 }, "end");
+    avail.to(".avail", {
         yPercent: -100,
         y: function () {
             return window.innerHeight;
         },
         duration: .25,
     }, "end");
+    avail.to(".footer", { yPercent: 0, duration: .25, }, "end")
+    avail.fromTo(".footer__bg", { yPercent: 30, duration: .5 }, { yPercent: 0, duration: .25 }, "end");
+
 
     const navAvail = ScrollTrigger.create({
         trigger: ".avail",
         containerAnimation: slide,
-        start: "left 60%",
-        end: "left 60%",
+        start: "left 40%",
+        end: "left 40%",
         // markers: true,
         onEnter: function () {
             $(".header__gnb-list a").removeClass("active");
@@ -329,19 +334,19 @@ mm.add("(min-width: 1001px)", () => {
         }
     })
 
-    const avail = gsap.timeline({
+    const availText = gsap.timeline({
         scrollTrigger: {
             trigger: ".avail",
             containerAnimation: slide,
-            start: "left 90%",
-            end: "left 90%",
+            start: "left 70%",
+            end: "left 70%",
             // scrub: 0,
             toggleActions: "play none reverse none",
             // markers: true,
         },
     });
 
-    avail.from(".avail__title .char", {
+    availText.from(".avail__title .char", {
         opacity: 0,
         stagger: {
             each: 0.1,
@@ -349,9 +354,6 @@ mm.add("(min-width: 1001px)", () => {
             amount: .25
         },
     })
-
-    slide.to(".footer", { yPercent: 0, duration: .25, }, "end");
-    slide.fromTo(".footer__bg", { yPercent: 30, duration: .5 }, { yPercent: 0, duration: .25 }, "end");
 
 });
 
@@ -425,6 +427,23 @@ mm.add("(max-width:1000px", () => {
         .to(".location-info__desc--area2", { opacity: 0 })
         .to(".location-info__desc--area3", { opacity: 1 });
 
+    const avail = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".avail",
+            start: "0% 100%",
+            end: "0% 100",
+            // markers: true,
+            toggleActions: "play none reverse none",
+        },
+    }).from(".avail__title .char", {
+        opacity: 0,
+        stagger: {
+            each: 0.1,
+            from: "random",
+            amount: 1.25
+        },
+    });
+
     const footer = gsap.timeline({
         scrollTrigger: {
             trigger: ".footer__header",
@@ -441,24 +460,7 @@ mm.add("(max-width:1000px", () => {
             amount: 1.25
         },
     });
-
-
-
 });
-
-// const locationGsap = gsap.timeline({
-//     scrollTrigger: {
-//         trigger: ".location",
-//         start: "0% 0%",
-//         end: "100% 100%",
-//         scrub: 0,
-//         markers: true,
-//         // invalidateOnRefresh: true,
-//         onStart: function () {
-//             console.log("123");
-//         }
-//     },
-// }).to(".location-info__desc--area1", { opacity: 0 });
 
 
 $(".footer__header-schedule").hover(
@@ -529,13 +531,6 @@ $(".footer__header-schedule").mousemove(function (e) {
 $(".footer__header-schedule").mouseleave(function () {
     gsap.to($(this), { x: 0, y: 0 });
 })
-
-// $(".apart__gallery").mousemove(function (e) {
-//     const x = (e.offsetX);
-//     const y = (e.offsetY);
-
-//     gsap.to($(".apart__gallery-expand"), { x: x, y: y });
-// })
 
 $(".header__gnb-list li").each(function (index) {
     $(this).click(function () {
